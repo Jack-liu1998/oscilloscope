@@ -365,7 +365,7 @@
               <MiscControls></MiscControls>
               <Define>STM32F10X_HD,USE_STDPERIPH_DRIVER</Define>
               <Undefine></Undefine>
-              <IncludePath>..\HARDWARE\LED;..\SYSTEM\delay;..\SYSTEM\sys;..\SYSTEM\usart;..\USER;..\STM32F10x_FWLib\inc;..\CORE;..\HARDWARE\LCD;..\HARDWARE\KEY;..\HARDWARE\IIC;..\HARDWARE\24CXX;..\HARDWARE\TOUCH;..\SYSTEM\GUI;..\SYSTEM\USMART;..\SYSTEM\ADC</IncludePath>
+              <IncludePath>..\HARDWARE\LED;..\SYSTEM\delay;..\SYSTEM\sys;..\SYSTEM\usart;..\USER;..\STM32F10x_FWLib\inc;..\CORE;..\HARDWARE\LCD;..\HARDWARE\KEY;..\HARDWARE\IIC;..\HARDWARE\24CXX;..\HARDWARE\TOUCH;..\SYSTEM\GUI;..\SYSTEM\USMART;..\SYSTEM\ADC;..\SYSTEM\DAC</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -522,6 +522,11 @@
               <FileName>adc.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\SYSTEM\ADC\adc.c</FilePath>
+            </File>
+            <File>
+              <FileName>dac.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\SYSTEM\DAC\dac.c</FilePath>
             </File>
           </Files>
         </Group>

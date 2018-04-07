@@ -10,8 +10,11 @@
 #include "GUI.h"
 //#include "usmart.h"
 #include "adc.h"
+#include "dac.h"
 #include "stm32f10x_dma.h"
+
 void Inits(void);//初始化
+
 void Mouse_display(void);//显示鼠标
 
  int main(void)
@@ -47,6 +50,6 @@ void Inits()
 	tp_dev.init();			//触摸屏初始化
 	//usmart_dev.init(72); 	//初始化USMART		
 		Adc_Init();
-	
+		Dac1_Init();
 }
 
