@@ -24,3 +24,5 @@
 ..\obj\main.o: ..\HARDWARE\TOUCH\gt9147.h
 ..\obj\main.o: ..\HARDWARE\TOUCH\ft5206.h
 ..\obj\main.o: ..\SYSTEM\GUI\GUI.h
+..\obj\main.o: ..\SYSTEM\ADC\adc.h
+..\obj\main.o: ..\STM32F10x_FWLib\inc\stm32f10x_dma.h

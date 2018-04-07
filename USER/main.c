@@ -8,16 +8,19 @@
 #include "myiic.h"
 #include "touch.h" 
 #include "GUI.h"
-
+//#include "usmart.h"
+#include "adc.h"
+#include "stm32f10x_dma.h"
 void Inits(void);//初始化
 void Mouse_display(void);//显示鼠标
+
  int main(void)
  { 
-	 
+
 	POINT_COLOR=RED;//设置字体为红色 
 	Inits();
+	 DMA_Cmd(DMA1_Channel1,ENABLE);  
 	LCD_Clear(WHITE);//清屏
-
 	 while(1)
 	 {
 		 Mouse_display();
@@ -30,7 +33,7 @@ void Mouse_display(void);//显示鼠标
 {
 		LCD_Display_Dir(0);//竖屏
 		TP_Scan(0);
-		 LCD_Draw_Circle(tp_dev.x[0],tp_dev.y[0],7);
+		 //LCD_Draw_Circle(tp_dev.x[0],tp_dev.y[0],7);
 }
 
 void Inits()
@@ -42,6 +45,8 @@ void Inits()
 	LCD_Init();			   	//初始化LCD 	
 	KEY_Init();				//按键初始化		 	
 	tp_dev.init();			//触摸屏初始化
+	//usmart_dev.init(72); 	//初始化USMART		
+		Adc_Init();
 	
 }
 
