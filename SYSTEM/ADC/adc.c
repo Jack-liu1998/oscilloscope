@@ -5,7 +5,7 @@
  
  #define ADC1_DR_Base (u32)0x4001244C
  
- uint16_t adc_buff[512];
+ uint16_t adc_buff[1500];
 //////////////////////////////////////////////////////////////////////////////////	 
 //±¾³ÌÐòÖ»¹©Ñ§Ï°Ê¹ÓÃ£¬Î´¾­×÷ÕßÐí¿É£¬²»µÃÓÃÓÚÆäËüÈÎºÎÓÃÍ¾
 //ALIENTEK miniSTM32¿ª·¢°å
@@ -65,7 +65,7 @@ void  Adc_Init(void)
 
 	ADC_InitStructure.ADC_Mode = ADC_Mode_Independent;	//ADC¹¤×÷Ä£Ê½:ADC1ºÍADC2¹¤×÷ÔÚ¶ÀÁ¢Ä£Ê½
 	ADC_InitStructure.ADC_ScanConvMode = DISABLE;	//Ä£Êý×ª»»¹¤×÷ÔÚµ¥Í¨µÀÄ£Ê½
-	ADC_InitStructure.ADC_ContinuousConvMode = DISABLE;	//Ä£Êý×ª»»¹¤×÷ÔÚµ¥´Î×ª»»Ä£Ê½
+	ADC_InitStructure.ADC_ContinuousConvMode = ENABLE;	//Ä£Êý×ª»»¹¤×÷ÔÚµ¶à´Î×ª»»Ä£Ê½
 	ADC_InitStructure.ADC_ExternalTrigConv = ADC_ExternalTrigConv_None;	//×ª»»ÓÉÈí¼þ¶ø²»ÊÇÍâ²¿´¥·¢Æô¶¯
 	ADC_InitStructure.ADC_DataAlign = ADC_DataAlign_Right;	//ADCÊý¾ÝÓÒ¶ÔÆë
 	ADC_InitStructure.ADC_NbrOfChannel = 1;	//Ë³Ðò½øÐÐ¹æÔò×ª»»µÄADCÍ¨µÀµÄÊýÄ¿
@@ -73,6 +73,8 @@ void  Adc_Init(void)
 
   
 	ADC_Cmd(ADC1, ENABLE);	//Ê¹ÄÜÖ¸¶¨µÄADC1
+	
+	ADC_RegularChannelConfig(ADC1, ADC_Channel_1, 1, ADC_SampleTime_1Cycles5);
 	
 	ADC_ResetCalibration(ADC1);	//Ê¹ÄÜ¸´Î»Ð£×¼  
 	 
@@ -84,8 +86,9 @@ void  Adc_Init(void)
  
 //	ADC_SoftwareStartConvCmd(ADC1, ENABLE);		//Ê¹ÄÜÖ¸¶¨µÄADC1µÄÈí¼þ×ª»»Æô¶¯¹¦ÄÜ
 	
-	ADC_DMACmd(ADC1,ENABLE);  //¿ªÊ¼
 	ADC_SoftwareStartConvCmd(ADC1, ENABLE);		//Ê¹ÄÜÖ¸¶¨µÄADC1µÄÈí¼þ×ª»»Æô¶¯¹¦ÄÜ	
+	delay_ms(2);
+		ADC_DMACmd(ADC1,ENABLE);  //¿ªÊ¼
 }				  
 //»ñµÃADCÖµ
 //ch:Í¨µÀÖµ 0~3

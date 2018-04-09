@@ -1,5 +1,5 @@
 Dependencies for Project 'TOUCH', Target 'Target 1': (DO NOT MODIFY !)
-F (.\main.c)(0x5AC837AF)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I..\HARDWARE\LED -I..\SYSTEM\delay -I..\SYSTEM\sys -I..\SYSTEM\usart -I..\USER -I..\STM32F10x_FWLib\inc -I..\CORE -I..\HARDWARE\LCD -I..\HARDWARE\KEY -I..\HARDWARE\IIC -I..\HARDWARE\24CXX -I..\HARDWARE\TOUCH -I..\SYSTEM\GUI -I..\SYSTEM\USMART -I..\SYSTEM\ADC -I..\SYSTEM\DAC-I E:\studying\test\electronic\oscilloscope\USER\RTE-I D:\mdk5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0-I D:\mdk5\ARM\CMSIS\Include-I D:\mdk5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-D__UVISION_VERSION="514" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\obj\main.o --omf_browse ..\obj\main.crf --depend ..\obj\main.d)
+F (.\main.c)(0x5AC88E1D)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I..\HARDWARE\LED -I..\SYSTEM\delay -I..\SYSTEM\sys -I..\SYSTEM\usart -I..\USER -I..\STM32F10x_FWLib\inc -I..\CORE -I..\HARDWARE\LCD -I..\HARDWARE\KEY -I..\HARDWARE\IIC -I..\HARDWARE\24CXX -I..\HARDWARE\TOUCH -I..\SYSTEM\GUI -I..\SYSTEM\USMART -I..\SYSTEM\ADC -I..\SYSTEM\DAC-I E:\studying\test\electronic\oscilloscope\USER\RTE-I D:\mdk5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0-I D:\mdk5\ARM\CMSIS\Include-I D:\mdk5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-D__UVISION_VERSION="514" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\obj\main.o --omf_browse ..\obj\main.crf --depend ..\obj\main.d)
 I (..\HARDWARE\LED\led.h)(0x532ACAF6)
 I (..\SYSTEM\sys\sys.h)(0x550F951A)
 I (..\USER\stm32f10x.h)(0x4D783CB4)
@@ -151,7 +151,7 @@ I (..\HARDWARE\TOUCH\ctiic.h)(0x531E8A9A)
 I (..\SYSTEM\usart\usart.h)(0x50517A82)
 I (D:\mdk5\ARM\ARMCC\include\stdio.h)(0x5475F300)
 I (..\SYSTEM\delay\delay.h)(0x55CC2E58)
-F (..\HARDWARE\TOUCH\touch.c)(0x55CB0EC4)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I..\HARDWARE\LED -I..\SYSTEM\delay -I..\SYSTEM\sys -I..\SYSTEM\usart -I..\USER -I..\STM32F10x_FWLib\inc -I..\CORE -I..\HARDWARE\LCD -I..\HARDWARE\KEY -I..\HARDWARE\IIC -I..\HARDWARE\24CXX -I..\HARDWARE\TOUCH -I..\SYSTEM\GUI -I..\SYSTEM\USMART -I..\SYSTEM\ADC -I..\SYSTEM\DAC-I E:\studying\test\electronic\oscilloscope\USER\RTE-I D:\mdk5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0-I D:\mdk5\ARM\CMSIS\Include-I D:\mdk5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-D__UVISION_VERSION="514" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\obj\touch.o --omf_browse ..\obj\touch.crf --depend ..\obj\touch.d)
+F (..\HARDWARE\TOUCH\touch.c)(0x5ACA2950)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I..\HARDWARE\LED -I..\SYSTEM\delay -I..\SYSTEM\sys -I..\SYSTEM\usart -I..\USER -I..\STM32F10x_FWLib\inc -I..\CORE -I..\HARDWARE\LCD -I..\HARDWARE\KEY -I..\HARDWARE\IIC -I..\HARDWARE\24CXX -I..\HARDWARE\TOUCH -I..\SYSTEM\GUI -I..\SYSTEM\USMART -I..\SYSTEM\ADC -I..\SYSTEM\DAC-I E:\studying\test\electronic\oscilloscope\USER\RTE-I D:\mdk5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0-I D:\mdk5\ARM\CMSIS\Include-I D:\mdk5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-D__UVISION_VERSION="514" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\obj\touch.o --omf_browse ..\obj\touch.crf --depend ..\obj\touch.d)
 I (..\HARDWARE\TOUCH\touch.h)(0x55CB04F6)
 I (..\SYSTEM\sys\sys.h)(0x550F951A)
 I (..\USER\stm32f10x.h)(0x4D783CB4)
@@ -308,7 +308,7 @@ I (..\STM32F10x_FWLib\inc\stm32f10x_rcc.h)(0x4D783BB4)
 I (..\STM32F10x_FWLib\inc\stm32f10x_usart.h)(0x504F415E)
 I (..\STM32F10x_FWLib\inc\misc.h)(0x4D783BB4)
 I (..\SYSTEM\USMART\usmart.h)(0x531AE45A)
-F (..\SYSTEM\ADC\adc.c)(0x5AC88B41)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I..\HARDWARE\LED -I..\SYSTEM\delay -I..\SYSTEM\sys -I..\SYSTEM\usart -I..\USER -I..\STM32F10x_FWLib\inc -I..\CORE -I..\HARDWARE\LCD -I..\HARDWARE\KEY -I..\HARDWARE\IIC -I..\HARDWARE\24CXX -I..\HARDWARE\TOUCH -I..\SYSTEM\GUI -I..\SYSTEM\USMART -I..\SYSTEM\ADC -I..\SYSTEM\DAC-I E:\studying\test\electronic\oscilloscope\USER\RTE-I D:\mdk5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0-I D:\mdk5\ARM\CMSIS\Include-I D:\mdk5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-D__UVISION_VERSION="514" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\obj\adc.o --omf_browse ..\obj\adc.crf --depend ..\obj\adc.d)
+F (..\SYSTEM\ADC\adc.c)(0x5ACB4783)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I..\HARDWARE\LED -I..\SYSTEM\delay -I..\SYSTEM\sys -I..\SYSTEM\usart -I..\USER -I..\STM32F10x_FWLib\inc -I..\CORE -I..\HARDWARE\LCD -I..\HARDWARE\KEY -I..\HARDWARE\IIC -I..\HARDWARE\24CXX -I..\HARDWARE\TOUCH -I..\SYSTEM\GUI -I..\SYSTEM\USMART -I..\SYSTEM\ADC -I..\SYSTEM\DAC-I E:\studying\test\electronic\oscilloscope\USER\RTE-I D:\mdk5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0-I D:\mdk5\ARM\CMSIS\Include-I D:\mdk5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-D__UVISION_VERSION="514" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\obj\adc.o --omf_browse ..\obj\adc.crf --depend ..\obj\adc.d)
 I (..\SYSTEM\ADC\adc.h)(0x5055357C)
 I (..\SYSTEM\sys\sys.h)(0x550F951A)
 I (..\USER\stm32f10x.h)(0x4D783CB4)
@@ -588,4 +588,4 @@ I (..\STM32F10x_FWLib\inc\stm32f10x_gpio.h)(0x532AE24E)
 I (..\STM32F10x_FWLib\inc\stm32f10x_rcc.h)(0x4D783BB4)
 I (..\STM32F10x_FWLib\inc\stm32f10x_usart.h)(0x504F415E)
 I (..\STM32F10x_FWLib\inc\misc.h)(0x4D783BB4)
-F (..\README.TXT)(0x55C44252)()
+F (..\README.TXT)(0x5ACA2954)()

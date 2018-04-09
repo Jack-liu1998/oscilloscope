@@ -8,7 +8,7 @@
 #include "myiic.h"
 #include "touch.h" 
 #include "GUI.h"
-//#include "usmart.h"
+#include "usmart.h"
 #include "adc.h"
 #include "dac.h"
 #include "stm32f10x_dma.h"
@@ -48,7 +48,7 @@ void Inits()
 	LCD_Init();			   	//初始化LCD 	
 	KEY_Init();				//按键初始化		 	
 	tp_dev.init();			//触摸屏初始化
-	//usmart_dev.init(72); 	//初始化USMART		
+	usmart_dev.init(72); 	//初始化USMART		
 		Adc_Init();
 		Dac1_Init();
 }

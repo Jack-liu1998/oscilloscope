@@ -147,7 +147,7 @@
             <RestoreSysVw>1</RestoreSysVw>
           </Target>
           <RunDebugAfterBuild>0</RunDebugAfterBuild>
-          <TargetSelection>6</TargetSelection>
+          <TargetSelection>11</TargetSelection>
           <SimDlls>
             <CpuDll></CpuDll>
             <CpuDllArguments></CpuDllArguments>
@@ -161,7 +161,7 @@
             <PeripheralDll></PeripheralDll>
             <PeripheralDllArguments></PeripheralDllArguments>
             <InitializationFile></InitializationFile>
-            <Driver>Segger\JL2CM3.dll</Driver>
+            <Driver>STLink\ST-LINKIII-KEIL_SWO.dll</Driver>
           </TargetDlls>
         </DebugOption>
         <Utilities>
@@ -365,7 +365,7 @@
               <MiscControls></MiscControls>
               <Define>STM32F10X_HD,USE_STDPERIPH_DRIVER</Define>
               <Undefine></Undefine>
-              <IncludePath>..\HARDWARE\LED;..\SYSTEM\delay;..\SYSTEM\sys;..\SYSTEM\usart;..\USER;..\STM32F10x_FWLib\inc;..\CORE;..\HARDWARE\LCD;..\HARDWARE\KEY;..\HARDWARE\IIC;..\HARDWARE\24CXX;..\HARDWARE\TOUCH;..\SYSTEM\GUI;..\SYSTEM\USMART;..\SYSTEM\ADC;..\SYSTEM\DAC</IncludePath>
+              <IncludePath>..\HARDWARE\LED;..\SYSTEM\delay;..\SYSTEM\sys;..\SYSTEM\usart;..\USER;..\STM32F10x_FWLib\inc;..\CORE;..\HARDWARE\LCD;..\HARDWARE\KEY;..\HARDWARE\IIC;..\HARDWARE\24CXX;..\HARDWARE\TOUCH;..\SYSTEM\GUI;..\SYSTEM\USMART;..\SYSTEM\ADC;..\SYSTEM\DAC;..\SYSTEM\Data_manage</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -527,6 +527,11 @@
               <FileName>dac.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\SYSTEM\DAC\dac.c</FilePath>
+            </File>
+            <File>
+              <FileName>Data_manage.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\SYSTEM\Data_manage\Data_manage.c</FilePath>
             </File>
           </Files>
         </Group>
