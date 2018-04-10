@@ -21,6 +21,7 @@
 "..\obj\usmart_str.o"
 "..\obj\adc.o"
 "..\obj\dac.o"
+"..\obj\data_manage.o"
 "..\obj\core_cm3.o"
 "..\obj\startup_stm32f10x_hd.o"
 "..\obj\stm32f10x_gpio.o"
