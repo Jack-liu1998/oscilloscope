@@ -2,23 +2,19 @@
  #include "delay.h"
  #include "stm32f10x_adc.h"
  #include "stm32f10x_dma.h"
+ #include "Data_manage.h"
  
  #define ADC1_DR_Base (u32)0x4001244C
  
- uint16_t adc_buff[1500];
-//////////////////////////////////////////////////////////////////////////////////	 
-//本程序只供学习使用，未经作者许可，不得用于其它任何用途
-//ALIENTEK miniSTM32开发板
-//ADC 代码	   
-//正点原子@ALIENTEK
-//技术论坛:www.openedv.com
-//修改日期:2012/9/7
-//版本：V1.0
-//版权所有，盗版必究。
-//Copyright(C) 广州市星翼电子科技有限公司 2009-2019
-//All rights reserved									  
-////////////////////////////////////////////////////////////////////////////////// 
-	   
+ uint16_t adc_buff[300];
+//T=0.857us
+
+void collect_once()
+{
+	DMA_Cmd(DMA1_Channel1,ENABLE);  
+	while(DMA_GetFlagStatus(DMA1_FLAG_HT1)==0);//等待采集完毕
+		//Data_manage(adc_buff);
+}
 		 
 void DMA_init()
 {
@@ -27,19 +23,19 @@ void DMA_init()
 		DMA_DeInit(DMA1_Channel1);  
     DMA_InitStructure.DMA_PeripheralBaseAddr = ADC1_DR_Base;//ADC
     DMA_InitStructure.DMA_MemoryBaseAddr = (uint32_t)&adc_buff; //adc的缓冲区
-    DMA_InitStructure.DMA_DIR = DMA_DIR_PeripheralSRC; //??(??????)  
-    DMA_InitStructure.DMA_BufferSize = 512; //???????  
-    DMA_InitStructure.DMA_PeripheralInc = DMA_PeripheralInc_Disable; //??????  
-    DMA_InitStructure.DMA_MemoryInc = DMA_MemoryInc_Enable; //??????  
+    DMA_InitStructure.DMA_DIR = DMA_DIR_PeripheralSRC; 
+    DMA_InitStructure.DMA_BufferSize = 300;  
+    DMA_InitStructure.DMA_PeripheralInc = DMA_PeripheralInc_Disable; 
+    DMA_InitStructure.DMA_MemoryInc = DMA_MemoryInc_Enable; 
     DMA_InitStructure.DMA_PeripheralDataSize =   
-    DMA_PeripheralDataSize_HalfWord ; //??????  
+    DMA_PeripheralDataSize_HalfWord ; 
     DMA_InitStructure.DMA_MemoryDataSize =   
-    DMA_MemoryDataSize_HalfWord ;    //??????  
-    DMA_InitStructure.DMA_Mode = DMA_Mode_Normal  ; //DMA??:????  
-    DMA_InitStructure.DMA_Priority = DMA_Priority_High ; //???:?  
-    DMA_InitStructure.DMA_M2M = DMA_M2M_Disable;   //??????????  
-      
-    DMA_Init(DMA1_Channel1, &DMA_InitStructure);  //??DMA1?4??  
+    DMA_MemoryDataSize_HalfWord ;   
+    DMA_InitStructure.DMA_Mode = DMA_Mode_Normal  ; 
+    DMA_InitStructure.DMA_Priority = DMA_Priority_High ; 
+    DMA_InitStructure.DMA_M2M = DMA_M2M_Disable;  
+	
+    DMA_Init(DMA1_Channel1, &DMA_InitStructure); 
     DMA_Cmd(DMA1_Channel1,DISABLE);  
 }
 		   
@@ -55,6 +51,8 @@ void  Adc_Init(void)
  
 
 	RCC_ADCCLKConfig(RCC_PCLK2_Div6);   //设置ADC分频因子6 72M/6=12,ADC最大时间不能超过14M
+	//14 PCLK per collection
+	//so T =12/14=0.857us
 
 	//PA1 作为模拟通道输入引脚                         
 	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_1;
